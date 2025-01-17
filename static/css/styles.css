@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light grey background */
+    color: #333; /* Dark text color */
+}
+
+header {
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.messages {
+    margin: 20px;
+    padding: 10px;
+}
+
+.alert {
+    background-color: #ffdddd;
+    border: 1px solid #ff5c5c;
+    color: #d8000c;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-error p {
+    color: #d8000c;
+    background-color: #ffdddd;
+    padding: 5px;
+    margin: 5px 0 0;
+    border-radius: 5px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Prediction Output */
+.output {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e6ffe6;
+    border: 1px solid #28a745;
+    color: #155724;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.redirect p {
+    text-align: center;
+    margin-top: 20px;
+}
