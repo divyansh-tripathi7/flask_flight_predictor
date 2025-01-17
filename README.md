@@ -2,6 +2,8 @@
 
 This project implements a **Machine Learning-based Flight Price Prediction model**. The goal of the project is to predict flight prices based on various input features such as airline, journey date, source, and destination. The model is trained using different algorithms, including **RandomForestRegressor**, **LinearRegression**, and **XGBoost**, and saved for deployment.
 
+[Flight Price Prediction App - Live](https://flight-predictor-model.onrender.com/)
+
 ## Features
 
 - **Flight Price Prediction**: Predict flight prices based on user input.
