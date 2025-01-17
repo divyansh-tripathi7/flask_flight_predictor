@@ -1,29 +1,77 @@
-# Flask Course Session 8 - Machine Learning Project
+# Flight Price Prediction
 
-## Overview
+This project implements a **Machine Learning-based Flight Price Prediction model**. The goal of the project is to predict flight prices based on various input features such as airline, journey date, source, and destination. The model is trained using different algorithms, including **RandomForestRegressor**, **LinearRegression**, and **XGBoost**, and saved for deployment.
 
-This repository contains the materials and code for Session 8 of the Flask Course, which focuses on deploying machine learning models using Flask. In this session, we developed a project to predict flight prices. The session covered interpreting learning curves, evaluating and selecting models, creating a web application with Flask, and deploying the app using Render.
+## Features
 
-## Relevant Links
-- [Course](https://learnwith.campusx.in/courses/Flask-for-Machine-Learning-Introduction-to-Flask--Dynamic-URL-Redirection-URL-Building-Jinja-Templates-Forms--Input-Validation-Databases-Sessions-Cookies-Training--Deloyment-of-ML-Model-6658698ad54433398d1a487b)
-- [Course Repository](https://github.com/MisbahullahSheriff/flask-course)
-- [Web Application](https://flask-course-ml-project.onrender.com)
+- **Flight Price Prediction**: Predict flight prices based on user input.
+- **Machine Learning Models**: Built using algorithms like **RandomForestRegressor**, **SVR**, **LinearRegression**, and **XGBoost**.
+- **Data Preprocessing**: Handles missing values, scales numerical features, encodes categorical variables, and extracts datetime features.
+- **Model Training and Evaluation**: The model is trained, evaluated, and saved for deployment.
 
-## Project Details
+## Technologies Used
 
-### Learning Curves and Model Evaluation
+- **Python**: Programming language for model building and backend logic.
+- **Scikit-learn**: For data preprocessing, model building, and evaluation.
+- **XGBoost**: For gradient boosting.
+- **Joblib**: For serializing the trained model.
+- **Matplotlib**: For visualizing learning curves.
+- **Flask**: For serving the model as an API.
 
-- **Understanding Learning Curves**: We explored how learning curves can be used to identify underfitting and overfitting in models.
-- **Model Selection**: We used learning curves to evaluate various models and select the best-performing one for our flight price prediction task.
+## Data Preprocessing
 
-### Web Application Development
+The data undergoes various preprocessing steps:
 
-- **Flask**: We built a web application using the Flask framework.
-- **WTForms**: We integrated WTForms for handling web forms and input validation.
-- **HTML Templates**: We utilized HTML templates with Jinja2 for dynamic content rendering.
-- **Template Inheritance**: We applied template inheritance to create reusable and maintainable templates.
+- **Numerical Features**: Imputation for missing values and scaling using **StandardScaler**.
+- **Categorical Features**: Imputation for missing values and encoding with **OneHotEncoder**.
+- **Datetime Features**: Extracting components like day, month, and time of day, and scaling them.
 
-### API Serving and Deployment
+## Model Training
 
-- **Model Serving**: The trained machine learning model was served as an API using Flask.
-- **Deployment**: The final Flask application was deployed using Render, making the web app accessible online.
+The following models are trained:
+
+1. **Linear Regression**: A simple linear model.
+2. **Support Vector Regressor (SVR)**: A model based on support vector machines.
+3. **Random Forest Regressor**: An ensemble learning method using random forests.
+4. **XGBoost**: A gradient-boosting method for better performance.
+
+The model training code is located in the `model_training.ipynb` notebook. Once trained, the model is serialized using **joblib**.
+
+
+## Web Application
+
+The web application is built using **Flask** to interact with the trained model. Users can input their flight details (such as airline, source, and destination), and the model predicts the flight price.
+
+### How to Run the Web App
+
+1. Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/yourusername/flight-price-prediction.git
+cd flight-price-prediction
+```
+
+2. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Start the Flask web server:
+
+```bash
+python app.py
+```
+
+4. Navigate to `http://127.0.0.1:5000/` in your browser to use the flight price prediction web app.
+
+## Model Deployment
+
+The trained model (`model.joblib`) is loaded in the Flask app to make predictions. The `app.py` file serves as the API that accepts user input, loads the model, and returns the predicted flight price.
+
+## Contributing
+
+Feel free to fork this repository, submit issues, and contribute via pull requests. Contributions to improve the project are welcome!
+
+
+
